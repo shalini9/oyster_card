@@ -10,7 +10,7 @@ class Oystercard
 
   def top_up(money)
     # fail is for user raise is for coders
-    fail "Maximum balance of exceeded #{MAXIMUM_BALANCE}" if money + @balance > MAXIMUM_BALANCE
+    fail "#{@balance} cannot exceed #{MAXIMUM_BALANCE}" if (money + @balance) > MAXIMUM_BALANCE
     @balance += money
   end 
 
